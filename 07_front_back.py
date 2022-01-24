@@ -1,3 +1,4 @@
+from math import ceil
 """
 07. front_back
 
@@ -12,7 +13,16 @@ a-frente + b-frente + a-trás + b-trás
 """
 def front_back(a, b):
     # +++ SUA SOLUÇÃO +++
-    return
+    afrentec = ceil(len(a) / 2)
+    bfrentec = ceil(len(b) / 2)
+    atrasc = ceil(len(a) // 2)
+    btrasc = ceil(len(b) // 2)
+
+    afrente = a[:afrentec]
+    bfrente = b[:bfrentec]
+    atras = a[afrentec:]
+    btras = b[bfrentec:]
+    return afrente + bfrente + atras + btras
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
