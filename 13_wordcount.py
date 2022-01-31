@@ -52,10 +52,35 @@ e conferindo cada etapa do seu progresso.
 """
 
 import sys
+from collections import Counter
 
 
 # +++ SUA SOLUÇÃO +++
 # Defina as funções print_words(filename) e print_top(filename).
+def print_words(filename):
+    with open("letras.txt") as filename:
+        dados = filename.read()
+        dados_minusculo = dados.lower()
+
+        new_letra = []
+        for letras in dados_minusculo:
+            if 'a' in letras:
+                new_letra.append(letras)
+            if 'b' in letras:
+                new_letra.append(letras)
+            if 'c' in letras:
+                new_letra.append(letras)
+
+        a = 'a ' + str(new_letra.count('a'))
+        b = 'b ' + str(new_letra.count('b'))
+        c = 'c ' + str(new_letra.count('c'))
+
+        print(a)
+        print(b)
+        print(c)
+
+def print_top(filename):
+    pass
 
 
 # A função abaixo chama print_words() ou print_top() de acordo com os
