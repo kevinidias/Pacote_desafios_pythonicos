@@ -10,13 +10,15 @@ Irá retornar: [1, 2, 3]
 
 def remove_adjacent(nums):
     # +++ SUA SOLUÇÃO +++
-    if nums == []:
+    if not nums:
         return []
 
     l = [nums[0]]
-    for current, next in zip(nums[:-1], nums[1:]):
-        if current != next:
-            l.append(next)
+    for c, n in zip(nums[:-1], nums[1:]):
+        if c != n:
+            l.append(n)
+
+    # return [nums[0]] + [n for c, n in zip(nums[:-1], nums[1:]) if c != n]
 
     return l
 
